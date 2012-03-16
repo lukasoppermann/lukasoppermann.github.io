@@ -6,7 +6,8 @@
 	<meta name="description" content="Lukas Oppermann is a freelance interface & interaction designer who enjoys creating fast, usable and gorgeous interfaces." />
 	<meta name="robots" content="index,follow" />
 	<meta name="language" content="en" />
-	<link rel="favicon" href="./media/layout/favicon.ico" />
+	<link rel="favicon" type="image/x-icon" href="./media/favicon.ico" />
+	<link rel="shortcut icon" href="./media/favicon.ico" type="image/x-icon" />
 	<link rel="stylesheet" type="text/css" href="./libs/css/screen.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="./libs/css/print.css" media="print" />
 	<title>Lukas Oppermann - interface & interaction designer | lukasoppermann.com</title>

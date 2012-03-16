@@ -31,7 +31,7 @@ body{
 	line-height: 80px;
 	margin-bottom: 30px;
 }
-#about .about-lukas-oppermann{
+#about .about-lukas-oppermann, #lukasoppermann_picture img{
 	padding-left: 10px;
 	font-size: 14px;
 	color: rgb(125,125,125);
