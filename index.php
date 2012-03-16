@@ -29,7 +29,7 @@
 		</div>
 		<div id="twitter" class="column-right column">
 			<div id="tweet">
-				<p>@christowski you online?</p>
+
 			</div>
 		</div>
 	</div>	

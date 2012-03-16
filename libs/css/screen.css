@@ -40,3 +40,20 @@ body{
 }
 #social_media{
 }
+#portfolio a{
+	margin: 10px 10px;
+	display: block;
+	float: left;
+	padding: 5px 20px;
+	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2), 0px 1px 0px 0px rgba(0,0,0,0.1), inset 0 1px 0 0 rgba(255,255,255,0.6);
+	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2), 0px 1px 0px 0px rgba(0,0,0,0.1), inset 0 1px 0 0 rgba(255,255,255,0.6);
+	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2), 0px 1px 0px 0px rgba(0,0,0,0.1), inset 0 1px 0 0 rgba(255,255,255,0.6);
+	border-bottom: 1px solid rgb(170,90,15);
+	border-radius: 3px;
+	color: rgb(170,90,15);
+	text-decoration: none;
+	text-shadow: rgba(255,255,255,0.2) 0px 1px 0px;
+	background-color: rgb(245,155,15);
+	background-image: -moz-linear-gradient(top, rgb(245,155,15), rgb(240,135,15));
+	background-image: -webkit-linear-gradient(top, rgb(245,155,15), rgb(240,135,15));
+}
