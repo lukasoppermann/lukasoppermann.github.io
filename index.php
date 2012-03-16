@@ -12,20 +12,23 @@
 	<title>Lukas Oppermann - interface & interaction designer | lukasoppermann.com</title>
 </head>
 <body>
-	<div id="about" class="column-right">
-		<h1>Lukas Oppermann</h1>
-		<p>I am an interface & information designer who enjoys devoting his life to plan, design & scrutinize fancy & usable interfaces. I also have a nack for typography.</p>
-	</div>
-	<div id="lukasoppermann_picture" class="column-left">
-		<img src="./media/lukasoppermann.jpg" alt="Interface Designer - Lukas Oppermann">
-	</div>
-	<div id="social_media" class="column-left">
-		
-	</div>
-	<div id="twitter" class="column-right">
-		<div id="tweet">
-			<p>@christowski you online?</p>
+	<div id="container">
+		<div id="about" class="column-right column">
+			<h1>Lukas Oppermann</h1>
+			<p>I am an interface & information designer who enjoys devoting his life to plan, design & scrutinize fancy & usable interfaces. I also have a nack for typography.</p>
 		</div>
-	</div>
+		<div id="lukasoppermann_picture" class="column-left column">
+			<img src="./media/lukasoppermann.jpg" alt="Interface Designer - Lukas Oppermann">
+		</div>
+		
+		<div id="social_media" class="column-left column">
+		
+		</div>
+		<div id="twitter" class="column-right column">
+			<div id="tweet">
+				<p>@christowski you online?</p>
+			</div>
+		</div>
+	</div>	
 </body>
 </html>
