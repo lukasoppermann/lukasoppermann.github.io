@@ -26,9 +26,15 @@
 		</div>
 		
 		<div id="social_media" class="column-left column">
-		
+			<a href="http://twitter.com/#!/lukasoppermann" id="twitter">Twitter</a>
+			<a href="http://www.xing.com/profile/Lukas_Oppermann" id="xing">Xing</a>
+			<a href="http://au.linkedin.com/in/lukasoppermann" id="linkedin">LinkedIn</a>
+			<a href="http://dribbble.com/lukasoppermann" id="dribbble">Dribbble</a>
+			<a href="https://plus.google.com/117502149578407470769/posts" id="googleplus">Google+</a>
+			<a href="http://designmomentum.tumblr.com/" id="tumblr">Tumblr</a>			
+			<a href="https://github.com/lukasoppermann" id="github">github</a>
 		</div>
-		<div id="twitter" class="column-right column">
+		<div id="tweet_container" class="column-right column">
 			<div id="tweet">
 
 			</div>
