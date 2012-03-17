@@ -29,10 +29,10 @@
 		<div id="about" class="column-right column">
 			<h1>Lukas<br /> Oppermann</h1>
 			<p class="about-lukas-oppermann">
-				My name is Lukas Oppermann and I enjoy creating usable, fast and gorgeous interfaces. As an interface &amp; interaction designer I mainly focus on designing mobile applications and websites working on the design as well as on the development.<br /><br />
-				Creating concepts with an intelligent workflow focussing on the user experience as the most important aspect, keeping in mind the SEO, accessibility and brand experience is what I like most.
+				My name is Lukas Oppermann and I have a passion for usable, fast and gorgeous interfaces. As an interface &amp; interaction designer I mainly focus on creating mobile applications and websites. I enjoy working on the visual design as well as programming the final app or website.<br /><br />
+				What I do best is designing concepts with an intelligent workflow, focussing on the user experience. While caring most about the user I never forget about SEO, accessibility and brand experience.
 				<br /><br />
-				I love state of the art technology like html 5 and css 3 and enjoy to get things done.
+				I love state of the art technologies, e.g. html 5 &amp; css 3, and I like getting things done.
 			</p>
 			<div id="portfolio">
 				<a href="http://veare.net/portfolio.html">Portfolio</a>

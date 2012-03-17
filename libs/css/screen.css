@@ -56,15 +56,7 @@ body{
 	letter-spacing: 1px;
 	color: rgb(245,245,245);
 	text-shadow: rgba(0,0,0,0.05) 0px -1px 1px;
-	transition-property: color;  
-	transition-duration: 1s;  
-	transition-delay: 0s; 
-	-webkit-transition-property: color;
-	-webkit-transition-duration: 1s;
-	-webkit-transition-delay: 0s;
-	-moz-transition-property: color;
-	-moz-transition-duration: 1s;
-	-moz-transition-delay: 0s;
+	cursor: pointer;
 }
 #social_media a:hover{
 	text-shadow: none;	
@@ -131,6 +123,19 @@ body{
 }
 #social_media #github:hover{
 	color: rgb(50,50,50);
+}
+#social_media #github, #social_media #tumblr, #social_media #linkedin, #social_media #dribbble,
+#social_media #xing, #social_media #twitter, #social_media #googleplus, #social_media a:hover{
+	transition-property: color;  
+	transition-duration: 1s;  
+	transition-delay: 0s; 
+	-webkit-transition-property: color;
+	-webkit-transition-duration: 1s;
+	-webkit-transition-delay: 0s;
+	-moz-transition-property: color;
+	-moz-transition-duration: 1s;
+	-moz-transition-delay: 0s;
+	cursor: pointer;	
 }
 #portfolio a{
 	margin: 10px 10px;
@@ -384,4 +389,13 @@ body{
 #lukasoppermann_picture:hover #email{
 	opacity: 1;
 	margin: 0 0 0 0px;
+}
+#lukasoppermann_picture #email:hover{
+	margin: 5px 0 0 0;
+	background: rgb(245,245,245);
+	text-shadow: rgb(255,255,255) 0px 1px 0px;
+	text-decoration: underline;
+}
+#lukasoppermann_picture #email:hover:before{
+	border-color: transparent rgb(245,245,245) transparent transparent;
 }
