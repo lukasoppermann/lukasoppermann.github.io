@@ -184,6 +184,15 @@ body{
 	border-style: solid;
 	border-color: transparent rgb(255,255,255) transparent transparent;
 	z-index: 2;
+	transition-property: border;  
+	transition-duration: .9s;  
+	transition-delay: 0s; 
+	-webkit-transition-property: border;
+	-webkit-transition-duration: .9s;
+	-webkit-transition-delay: 0s;
+	-moz-transition-property: border;
+	-moz-transition-duration: .9s;
+	-moz-transition-delay: 0s;
 }
 #tweet_container li:hover .arrow{
 	border-color: transparent rgb(245,245,245) transparent transparent;
@@ -245,8 +254,11 @@ body{
 #tweets a:hover{
 	border-bottom: 1px solid rgb(225,225,225);	
 }
-#tweets .tweet:hover .tweet-time, #tweets .tweet:hover .tweet-link{
+#tweets .tweet:hover .tweet-time{
 	opacity: 1;
+}
+#tweets .tweet:hover .tweet-link{
+	opacity: 0.5;	
 }
 #tweets .tweet:hover .tweet-time{
 	margin: 0 0px 0 0;
@@ -270,7 +282,9 @@ body{
 	-moz-transition-duration: .35s;
 	-moz-transition-delay: 0s;
 }
-#tweets .tweet-link{
+#tweets .tweet .tweet-link{
+	text-decoration: none;
+	border: none;
 	opacity: 0;	
 	position: absolute;
 	top: 20px;
@@ -284,6 +298,14 @@ body{
 	-moz-transition-property: opacity;
 	-moz-transition-duration: .35s;
 	-moz-transition-delay: 0s;
+	height: 24px;
+	width: 30px;
+	background-image: url('../../media/link-01.png');
+	background-repeat: no-repeat;
+	background-position: top right;
+}
+#tweets .tweet .tweet-link:hover{
+	opacity: 1;
 }
 #tweets .tweet{
 	float: left;
