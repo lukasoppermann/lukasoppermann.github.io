@@ -11,6 +11,19 @@
 	<link rel="stylesheet" type="text/css" href="./libs/css/screen.css" media="screen" />
 	<link rel="stylesheet" type="text/css" href="./libs/css/print.css" media="print" />
 	<title>Lukas Oppermann - interface & interaction designer | lukasoppermann.com</title>
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-7074034-23']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
 </head>
 <body>
 	<div id="container">
@@ -22,6 +35,7 @@
 			</div>
 		</div>
 		<div id="lukasoppermann_picture" class="column-left column">
+			<a id="email" href="mailto:lukas@veare.net">Drop me a line.</a>
 			<img src="./media/lukasoppermann.jpg" alt="Interface Designer - Lukas Oppermann">
 		</div>
 		
@@ -35,9 +49,161 @@
 			<a href="https://github.com/lukasoppermann" id="github">github</a>
 		</div>
 		<div id="tweet_container" class="column-right column">
-			<div id="tweet">
+			<ul id="tweets">
+<?
+	// twitter user name
+	$twitterid = "lukasoppermann";
+	// link fn
+	function change_link($string, $urls)
+	{
+		foreach($urls as $url)
+		{
+			$string = str_replace($url['url'], "<a rel=\"nofollow\" target=\"_blank\" href='".$url['expanded_url']."'>".$url['expanded_url']."</a>", $string);
+	  	}	
+		return $string;
+	}
 
-			</div>
+
+	function tweet_time($t)
+	{
+		// clean
+		$time_date = substr($t, 5, -6);
+		// get tome
+		$time = substr($time_date, -8);
+		// get date
+		$date = substr($time_date,0, 11);
+		$date_arr = explode(' ',$date);
+		// get month
+		$m = array('jan' => '01', 'feb' => '02', 'mar' => '03', 'apr' => '04', 'may' => '05', 'jun' => '06', 'jul' => '07', 'aug' => '08', 'sep' => '09', 'oct' => '10', 'nov' => '11', 'dec' => '12');
+		// build new date time string
+		$time_date = $date_arr[2].'-'.$m[strtolower($date_arr[1])].'-'.$date_arr[0].' '.$time;
+		//
+		return $time_date;
+	}
+	
+	function getLatestTweet($t_json, $twitterid)
+	{
+		$json = file_get_contents($t_json);
+		$tweets = json_decode($json, TRUE);
+		$tweets = $tweets['results'];
+		
+		$c = 0;
+		foreach($tweets as $tweettag)
+		{
+			$c++;
+			$arrow = "";
+			$time_date = tweet_time($tweettag['created_at']);
+	   		$tweettime = (human_to_unix($time_date))+3600; // time difference - UK + 1 hours (3600s)
+	   		$timeago = (time()-$tweettime);
+	   		$thehours = floor($timeago/3600);
+	   		$theminutes = floor($timeago/60);
+	   		$thedays = floor($timeago/86400);
+			if($theminutes < 60)
+			{
+				if($theminutes < 1)
+				{
+		 			$timemessage =  "Less than 1 minute ago";
+				}
+				elseif($theminutes == 1) 
+				{
+		 			$timemessage = $theminutes." minute ago.";
+		 		}
+				else
+				{
+		 			$timemessage = $theminutes." minutes ago.";
+		 		}
+		
+			} 
+			elseif($theminutes > 60 && $thedays < 1)
+			{
+		 		if($thehours == 1)
+				{
+		 			$timemessage = $thehours." hour ago.";
+		 		} 
+				else 
+				{
+		 			$timemessage = $thehours." hours ago.";
+		 		}
+			} 
+			else
+			{
+		 		if($thedays == 1)
+				{
+		 			$timemessage = $thedays." day ago.";
+		 		}
+				else
+				{
+					$timemessage = $thedays." days ago.";
+			}
+		}
+		// Tweet
+		if($c == 1){
+			$arrow = '<span class="arrow"></span>';
+		}
+		echo "<li class='tweet'>".$arrow.change_link($tweettag["text"], $tweettag['entities']['urls'])."<br />\n";
+		// time
+		echo "<span class='tweet-time'>".$timemessage."</span><a target='_blank' rel='nofollow' class='tweet-link' href='https://twitter.com/#!/".$twitterid.'/status/'.$tweettag['id_str']."'></a></li>\n";
+		}
+	}
+	$tweets_json = "http://search.twitter.com/search.json?q=from:".$twitterid."&rpp=3&with_twitter_user_id=true&include_entities=true";
+	getLatestTweet($tweets_json, $twitterid);
+	
+	function human_to_unix($datestr = '')
+	{
+		if ($datestr == '')
+		{
+			return FALSE;
+		}
+
+		$datestr = trim($datestr);
+		$datestr = preg_replace("/\040+/", ' ', $datestr);
+
+		if ( ! preg_match('/^[0-9]{2,4}\-[0-9]{1,2}\-[0-9]{1,2}\s[0-9]{1,2}:[0-9]{1,2}(?::[0-9]{1,2})?(?:\s[AP]M)?$/i', $datestr))
+		{
+			return FALSE;
+		}
+
+		$split = explode(' ', $datestr);
+
+		$ex = explode("-", $split['0']);
+
+		$year  = (strlen($ex['0']) == 2) ? '20'.$ex['0'] : $ex['0'];
+		$month = (strlen($ex['1']) == 1) ? '0'.$ex['1']  : $ex['1'];
+		$day   = (strlen($ex['2']) == 1) ? '0'.$ex['2']  : $ex['2'];
+
+		$ex = explode(":", $split['1']);
+
+		$hour = (strlen($ex['0']) == 1) ? '0'.$ex['0'] : $ex['0'];
+		$min  = (strlen($ex['1']) == 1) ? '0'.$ex['1'] : $ex['1'];
+
+		if (isset($ex['2']) && preg_match('/[0-9]{1,2}/', $ex['2']))
+		{
+			$sec  = (strlen($ex['2']) == 1) ? '0'.$ex['2'] : $ex['2'];
+		}
+		else
+		{
+			// Unless specified, seconds get set to zero.
+			$sec = '00';
+		}
+
+		if (isset($split['2']))
+		{
+			$ampm = strtolower($split['2']);
+
+			if (substr($ampm, 0, 1) == 'p' AND $hour < 12)
+				$hour = $hour + 12;
+
+			if (substr($ampm, 0, 1) == 'a' AND $hour == 12)
+				$hour =  '00';
+
+			if (strlen($hour) == 1)
+				$hour = '0'.$hour;
+		}
+
+		return mktime($hour, $min, $sec, $month, $day, $year);
+	}
+?>
+			</ul>
 		</div>
 	</div>	
 </body>

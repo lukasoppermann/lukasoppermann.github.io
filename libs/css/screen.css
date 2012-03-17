@@ -20,9 +20,11 @@ body{
 #lukasoppermann_picture{
 	float: left;
 	margin: 50px 0 0 20px;
+	height: 460px;
 }
 #about{
 	float: right;
+	height: 510px;	
 }
 #about h1{
 	color: rgb(255,255,255);
@@ -33,7 +35,7 @@ body{
 }
 #about .about-lukas-oppermann, #lukasoppermann_picture img{
 	padding-left: 10px;
-	font-size: 14px;
+	font-size: 15px;
 	color: rgb(125,125,125);
 	text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
 	width: 350px;
@@ -41,6 +43,7 @@ body{
 #social_media{
 	margin: 20px 0 0 10px;
 	position: relative;
+	float: left;
 	height: 400px;
 	padding-left: 20px;
 }
@@ -133,7 +136,7 @@ body{
 	margin: 10px 10px;
 	display: block;
 	float: left;
-	padding: 5px 20px;
+	padding: 7px 22px;
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2), 0px 1px 0px 0px rgba(0,0,0,0.1), inset 0 1px 0 0 rgba(255,255,255,0.6);
 	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2), 0px 1px 0px 0px rgba(0,0,0,0.1), inset 0 1px 0 0 rgba(255,255,255,0.6);
 	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.2), 0px 1px 0px 0px rgba(0,0,0,0.1), inset 0 1px 0 0 rgba(255,255,255,0.6);
@@ -145,21 +148,218 @@ body{
 	background-color: rgb(245,155,15);
 	background-image: -moz-linear-gradient(top, rgb(245,155,15), rgb(240,135,15));
 	background-image: -webkit-linear-gradient(top, rgb(245,155,15), rgb(240,135,15));
-	transition-property: background, box-shadow;  
+	transition-property: background-image, box-shadow;  
 	transition-duration: .6s;  
 	transition-delay: 0s; 
-	-webkit-transition-property: background, box-shadow;
+	-webkit-transition-property: background-image, box-shadow;
 	-webkit-transition-duration: .6s;
 	-webkit-transition-delay: 0s;
-	-moz-transition-property: background, box-shadow;
+	-moz-transition-property: background-image, box-shadow;
 	-moz-transition-duration: .6s;
 	-moz-transition-delay: 0s;
 }
 #portfolio a:hover{
 	background-color: rgb(245,155,15);
-	background-image: -moz-linear-gradient(top, rgb(250,160,15), rgb(245,140,15));
-	background-image: -webkit-linear-gradient(top, rgb(245,155,15), rgb(240,135,15));	
+	background-image: -moz-linear-gradient(top, rgb(255,165,20), rgb(250,145,15));
+	background-image: -webkit-linear-gradient(top, rgb(255,165,20), rgb(250,145,15));	
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.5), 0px 1px 0px 0px rgba(0,0,0,0.1), inset 0 1px 0 0 rgba(255,255,255,0.6);
 	-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.5), 0px 1px 0px 0px rgba(0,0,0,0.1), inset 0 1px 0 0 rgba(255,255,255,0.6);
 	-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.5), 0px 1px 0px 0px rgba(0,0,0,0.1), inset 0 1px 0 0 rgba(255,255,255,0.6);	
+}
+#tweet_container{
+	margin-top: 20px;
+	max-width: 440px;
+	float: left;
+	position: relative;	
+}
+#tweet_container li .arrow{
+	height: 0px;
+	width: 0px;
+	display: block;
+	padding: 0;
+	border-width: 7px;
+	position: absolute;
+	left: -14px;
+	top: 15px;
+	border-style: solid;
+	border-color: transparent rgb(255,255,255) transparent transparent;
+	z-index: 2;
+}
+#tweet_container li:hover .arrow{
+	border-color: transparent rgb(245,245,245) transparent transparent;
+}
+#tweet_container:before{
+	content: "";
+	height: 0px;
+	width: 0px;
+	display: block;
+	padding: 0;
+	border-width: 8px;
+	position: absolute;
+	left: -16px;
+	top: 27px;
+	border-style: solid;
+	border-color: transparent rgba(0,0,0,0.075) transparent transparent;
+	z-index: 1;
+}
+#tweets{
+	list-style: none;
+	display: block;
+	width: auto;
+	float: left;
+	font-size: 12px;
+	color: rgb(100,100,100);
+	border-radius: 3px;
+	box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.2);
+	background-color: rgb(250,250,250);
+	padding: 0px;
+}
+#tweets li:hover{
+	background-color: rgb(245,245,245);
+}
+#tweets li:first-child{
+	border-top-left-radius: 3px;
+	border-top-right-radius: 3px;
+	-webkit-border-radius-topleft: 3px;
+	-webkit-border-radius-topright: 3px;
+}
+#tweets li:last-child{
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-webkit-border-radius-bottom-left: 3px;
+	-webkit-border-radius-bottom-right: 3px;
+}
+#tweets a{
+	color: rgb(250,145,15);
+	text-decoration: none;
+	border-bottom: 1px dashed rgb(235,235,235);
+	line-height: 12px;
+	display: inline-block;
+	cursor: pointer;	
+}
+#tweets a[href^="http://twitter.com"]{
+	color: rgb(175,175,175);
+}
+#tweets a:hover{
+	border-bottom: 1px solid rgb(225,225,225);	
+}
+#tweets .tweet:hover .tweet-time, #tweets .tweet:hover .tweet-link{
+	opacity: 1;
+}
+#tweets .tweet:hover .tweet-time{
+	margin: 0 0px 0 0;
+}
+#tweets .tweet-time{
+	opacity: 0;
+	font-size: 10px;
+	font-style: italic;
+	color: rgb(175,175,175);
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	margin-right: 20px;
+	transition-property: opacity, margin;  
+	transition-duration: .35s;  
+	transition-delay: 0s; 
+	-webkit-transition-property: opacity, margin;
+	-webkit-transition-duration: .35s;
+	-webkit-transition-delay: 0s;
+	-moz-transition-property: opacity, margin;
+	-moz-transition-duration: .35s;
+	-moz-transition-delay: 0s;
+}
+#tweets .tweet-link{
+	opacity: 0;	
+	position: absolute;
+	top: 20px;
+	right: 5px;	
+	transition-property: opacity;  
+	transition-duration: .35s;  
+	transition-delay: 0s; 
+	-webkit-transition-property: opacity;
+	-webkit-transition-duration: .35s;
+	-webkit-transition-delay: 0s;
+	-moz-transition-property: opacity;
+	-moz-transition-duration: .35s;
+	-moz-transition-delay: 0s;
+}
+#tweets .tweet{
+	float: left;
+	position: relative;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;	
+	padding: 15px 70px 15px 15px;
+	border-bottom: 1px dashed rgb(230,230,230);
+	transition-property: background;  
+	transition-duration: .9s;  
+	transition-delay: 0s; 
+	-webkit-transition-property: background;
+	-webkit-transition-duration: .9s;
+	-webkit-transition-delay: 0s;
+	-moz-transition-property: background;
+	-moz-transition-duration: .9s;
+	-moz-transition-delay: 0s;
+}
+#tweets .tweet:last-child{
+	border-bottom: none;
+}
+#email{
+	text-decoration: none;
+	opacity: 0;
+	margin: 0 0 0 -30px;
+	font-size: 13px;
+	color: rgb(100,100,100);
+	position: absolute;
+	display: block;
+	left: 280px;
+	top: 80px;
+	padding: 11px 13px;
+	border-radius: 3px;
+	background-color: rgb(250,250,250);
+	box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
+	-webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.3);
+	transition-property: opacity, margin;  
+	transition-duration: .4s;  
+	transition-delay: 0s; 
+	-webkit-transition-property: opacity, margin;
+	-webkit-transition-duration: .4s;
+	-webkit-transition-delay: 0s;
+	-moz-transition-property: opacity, margin;
+	-moz-transition-duration: .4s;
+	-moz-transition-delay: 0s;
+}
+#email:before{
+	content: "";
+	display: block;
+	position: absolute;
+	left: -10px;
+	top: 9px;
+	height: 0;
+	width: 0;
+	border-width: 5px;
+	border-style: solid;
+	border-color: transparent rgb(255,255,255) transparent transparent;
+	z-index: 2;
+}
+#email:after{
+	content: "";
+	display: block;
+	position: absolute;
+	left: -14px;
+	top: 7px;
+	height: 0;
+	width: 0;
+	border-width: 7px;
+	border-style: solid;
+	border-color: transparent rgba(0,0,0,0.05) transparent transparent;
+	z-index: 1;	
+}
+#lukasoppermann_picture:hover #email{
+	opacity: 1;
+	margin: 0 0 0 0px;
 }
