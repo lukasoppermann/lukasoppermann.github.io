@@ -35,10 +35,10 @@ body{
 }
 #about .about-lukas-oppermann, #lukasoppermann_picture img{
 	padding-left: 10px;
-	font-size: 15px;
+	font-size: 13px;
 	color: rgb(125,125,125);
 	text-shadow: rgba(255,255,255,0.5) 0px 1px 0px;
-	width: 350px;
+	width: 370px;
 }
 #social_media{
 	margin: 20px 0 0 10px;

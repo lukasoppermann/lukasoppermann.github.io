@@ -28,7 +28,12 @@
 	<div id="container">
 		<div id="about" class="column-right column">
 			<h1>Lukas<br /> Oppermann</h1>
-			<p class="about-lukas-oppermann">I am an interface & information designer who enjoys devoting his life to plan, design & scrutinize fancy & usable interfaces. I also have a nack for typography.</p>
+			<p class="about-lukas-oppermann">
+				My name is Lukas Oppermann and I enjoy creating usable, fast and gorgeous interfaces. As an interface &amp; interaction designer I mainly focus on designing mobile applications and websites working on the design as well as on the development.<br /><br />
+				Creating concepts with an intelligent workflow focussing on the user experience as the most important aspect, keeping in mind the SEO, accessibility and brand experience is what I like most.
+				<br /><br />
+				I love state of the art technology like html 5 and css 3 and enjoy to get things done.
+			</p>
 			<div id="portfolio">
 				<a href="http://veare.net/portfolio.html">Portfolio</a>
 			</div>
@@ -37,7 +42,7 @@
 			<script type="text/javascript">document.write(
 "<n vq=\"rznvy\" uers=\"znvygb:yhxnf\100irner\056arg\">Qebc zr n yvar\056<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
 </script>
-			<img src="./media/lukasoppermann_profil.jpg" alt="Interface Designer - Lukas Oppermann">
+			<img src="media/lukasoppermann_profile.jpg" alt="Interface Designer - Lukas Oppermann">
 		</div>
 		
 		<div id="social_media" class="column-left column">
