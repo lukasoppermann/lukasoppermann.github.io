@@ -37,7 +37,7 @@
 			<script type="text/javascript">document.write(
 "<n vq=\"rznvy\" uers=\"znvygb:yhxnf\100irner\056arg\">Qebc zr n yvar\056<\057n>".replace(/[a-zA-Z]/g, function(c){return String.fromCharCode((c<="Z"?90:122)>=(c=c.charCodeAt(0)+13)?c:c-26);}));
 </script>
-			<img src="./media/lukasoppermann.jpg" alt="Interface Designer - Lukas Oppermann">
+			<img src="./media/lukasoppermann_profil.jpg" alt="Interface Designer - Lukas Oppermann">
 		</div>
 		
 		<div id="social_media" class="column-left column">
